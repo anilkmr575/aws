@@ -60,7 +60,7 @@ pipeline {
                 echo "Workspace cleaned"
             }
       }*/
-    
+ stage('mail notification') {  
   post {  
     always {
       mail (body: "This is the Build ID: ${BUILD_ID} \n Thanks& Regards #cp  ",
@@ -69,8 +69,9 @@ pipeline {
             subject: "${appname} ${JOB_NAME}",
             to: 'chandra.prakash363@gmail.com')
 
+     }
    }
- }
+ } 
         
      // The options directive is for configuration that applies to the whole job.
     options {
