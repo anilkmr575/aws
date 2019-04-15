@@ -60,7 +60,7 @@ pipeline {
                 echo "Workspace cleaned"
             }
       }*/
- stage('mail notification') {  
+ /*stage('mail notification') {  
   post {  
     always {
       mail (body: "This is the Build ID: ${BUILD_ID} \n Thanks& Regards #cp  ",
@@ -71,10 +71,10 @@ pipeline {
 
      }
    }
- } 
+ } */
         
      // The options directive is for configuration that applies to the whole job.
-    stage('cleanup build') {  
+   /* stage('cleanup build') {  
     options {
         // For example, we'd like to make sure we only keep 10 builds at a time, so
         // we don't fill up our storage!
@@ -84,6 +84,6 @@ pipeline {
         // let's time it out after an hour.
         timeout(time: 60, unit: 'MINUTES')
     }
-   }   
+   }   */
  } 
 }
