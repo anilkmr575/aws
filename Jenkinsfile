@@ -45,9 +45,10 @@ pipeline {
                  sh ' terraform apply -auto-approve -var-file="terraform/custom.tfvars" terraform '
             }
         }*/
+       } 
     }
   
-    /*  post {
+      post {
             success {
                 echo "Test run completed succesfully."
             }
@@ -59,10 +60,9 @@ pipeline {
                 deleteDir()
                 echo "Workspace cleaned"
             }
-      }*/
- /*stage('mail notification') {  
-  post {  
-    always {
+      }
+     post {  
+      always {
       mail (body: "This is the Build ID: ${BUILD_ID} \n Thanks& Regards #cp  ",
             from: "${mailNotifier}",
             replyTo: 'donotreply@gmail.com',
@@ -71,10 +71,10 @@ pipeline {
 
      }
    }
- } */
+  
         
      // The options directive is for configuration that applies to the whole job.
-   /* stage('cleanup build') {  
+    
     options {
         // For example, we'd like to make sure we only keep 10 builds at a time, so
         // we don't fill up our storage!
@@ -84,6 +84,4 @@ pipeline {
         // let's time it out after an hour.
         timeout(time: 60, unit: 'MINUTES')
     }
-   }   */
- } 
-}
+}    
