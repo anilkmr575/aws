@@ -45,8 +45,9 @@ pipeline {
                  sh ' terraform apply -auto-approve -var-file="terraform/custom.tfvars" terraform '
             }
         }*/
-       } 
-    }
+       } //end steps
+    } //end state
+} // end stages
   
       post {
             success {
@@ -84,4 +85,4 @@ pipeline {
         // let's time it out after an hour.
         timeout(time: 60, unit: 'MINUTES')
     }
-}    
+}    //end pipeline
