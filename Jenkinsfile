@@ -45,7 +45,7 @@ pipeline {
                  sh ' terraform apply -auto-approve -var-file="terraform/custom.tfvars" terraform '
             }
         }*/
-       } //end steps
+       
     } //end state
 } // end stages
   
