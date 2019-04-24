@@ -1,4 +1,4 @@
-def appname = 'My Jenkins Build: '
+def appname = 'My Jenkins Build:'
 def jenkinsUrl = "${env.JENKINS_URL}"
 def JOB_NAME = "${env.JOB_NAME}"
 def BUILD_ID = "${env.BUILD_ID}"
